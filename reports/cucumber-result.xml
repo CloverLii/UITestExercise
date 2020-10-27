@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="43.138928">
+<testcase classname="" name="Query existing Used Cars listing from &quot;Motors&quot; catalogue" time="17.038241">
+<failure message="java.lang.AssertionError: This car does not contain all required details expected [true] but found [false]&#10;&#9;at org.testng.Assert.fail(Assert.java:99)&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:1037)&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:45)&#10;&#9;at cucumber.steps.UITestStepDef.check_car_detais(UITestStepDef.java:153)&#10;&#9;at ✽.And I check the 1st car to confirm following details: Number plate, Kilometres, Body and Seats(src/test/resources/UIFunc.feature:15)&#10;"><![CDATA[Given I am on the home page of TradeMe sandbox web..........................passed
+When I click "Motors" tab catalogue.........................................passed
+And I click "Used Cars" item in the center of page..........................passed
+Then I get a list of used cars..............................................passed
+And I check the 1st car to confirm following details: Number plate, Kilometres, Body and Seats.failed
+
+StackTrace:
+java.lang.AssertionError: This car does not contain all required details expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at cucumber.steps.UITestStepDef.check_car_detais(UITestStepDef.java:153)
+	at ✽.And I check the 1st car to confirm following details: Number plate, Kilometres, Body and Seats(src/test/resources/UIFunc.feature:15)
+]]></failure>
+</testcase>
+<testcase classname="" name="Query existing Used Cars listing from &quot;Browse&quot; Menu" time="16.263208">
+<failure message="java.lang.AssertionError: This car does not contain all required details expected [true] but found [false]&#10;&#9;at org.testng.Assert.fail(Assert.java:99)&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:1037)&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:45)&#10;&#9;at cucumber.steps.UITestStepDef.check_car_detais(UITestStepDef.java:153)&#10;&#9;at ✽.And I check the 1st car to confirm following details: Number plate, Kilometres, Body and Seats(src/test/resources/UIFunc.feature:24)&#10;"><![CDATA[Given I am on the home page of TradeMe sandbox web..........................passed
+When I click the "Browse" menu on the top of the page.......................passed
+And I click the link of "Cars, bikes & boats"...............................passed
+And I click "Used Cars" item in the center of page..........................passed
+Then I get a list of used cars..............................................passed
+And I check the 1st car to confirm following details: Number plate, Kilometres, Body and Seats.failed
+
+StackTrace:
+java.lang.AssertionError: This car does not contain all required details expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at cucumber.steps.UITestStepDef.check_car_detais(UITestStepDef.java:153)
+	at ✽.And I check the 1st car to confirm following details: Number plate, Kilometres, Body and Seats(src/test/resources/UIFunc.feature:24)
+]]></failure>
+</testcase>
+<testcase classname="" name="Query exisitng Used Cars listing from search box" time="9.837479">
+<failure message="java.lang.AssertionError: expected [true] but found [false]&#10;&#9;at org.testng.Assert.fail(Assert.java:99)&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:1037)&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:45)&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:55)&#10;&#9;at cucumber.steps.UITestStepDef.no_matching_result(UITestStepDef.java:225)&#10;&#9;at ✽.But No results matching(src/test/resources/UIFunc.feature:33)&#10;"><![CDATA[Given I am on the home page of TradeMe sandbox web..........................passed
+When I input "used cars" in the search box..................................passed
+And I click down-facing arrow in the search box.............................passed
+And I select the catalogue link "Cars, bikes & boats".......................passed
+And I click the search icon.................................................passed
+But No results matching.....................................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at cucumber.steps.UITestStepDef.no_matching_result(UITestStepDef.java:225)
+	at ✽.But No results matching(src/test/resources/UIFunc.feature:33)
+]]></failure>
+</testcase>
+</testsuite>
